@@ -45,27 +45,13 @@ app.use(passport.session());
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:4200"]  
+    origin: ["http://localhost:8100"]  
   })
 );
 
 // Routes
-var index = require("./routes/index");
-app.use("/", index);
-
 var authRoutes = require("./routes/auth-routes");
 app.use("/", authRoutes);
-
-var forumRoutes = require("./routes/forum-routes");
-app.use("/", forumRoutes);
-
-var commentRoutes = require("./routes/comment-routes");
-app.use("/", commentRoutes);
-
-app.use((req, res, next) => {
-  // If no routes match, send them the Angular HTML.
-  res.sendFile(__dirname + "/public/index.html");
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,9 +1,9 @@
 # ClipHub
 
 
-## Link to My Game
+## Link to My Site
 
-[ClipHub by Michael Elso](www.cliphub.stream)
+[www.cliphub.stream](http://www.cliphub.stream)
 
 
 ## What I Used!
